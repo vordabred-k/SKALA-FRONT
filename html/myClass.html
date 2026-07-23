@@ -8,59 +8,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css"
     />
+    <link rel="stylesheet" href="../css/style.css" />
     <style>
-      body {
-        font-family: "Pretendard Variable", "Pretendard", sans-serif;
-        background-color: #f7f8fb;
-        color: #1f2937;
-        margin: 0;
-        padding: 40px 24px;
-      }
-
-      .wrap {
-        max-width: 980px;
-        margin: 0 auto;
-        background: #ffffff;
-        border-radius: 16px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-        padding: 28px;
-      }
-
-      h1 {
-        margin-top: 0;
-        margin-bottom: 20px;
-        font-size: 28px;
-        color: #2f4f4f;
-      }
-
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        border: 1px solid #d9e2ec;
-        overflow: hidden;
-        border-radius: 12px;
-      }
-
-      th,
-      td {
-        border: 1px solid #e5e7eb;
-        padding: 12px 10px;
-        text-align: center;
-        vertical-align: middle;
-      }
-
-      th {
-        background-color: #eef4f7;
-        color: #334155;
-        font-weight: 600;
-      }
-
-      td:first-child {
-        background-color: #f9fbfd;
-        font-weight: 600;
-        color: #475569;
-      }
-
       .class-item {
         background-color: #f0fdf4;
         color: #166534;
@@ -77,63 +26,91 @@
         color: #9a2c00;
         font-weight: 600;
       }
+
+      td:first-child {
+        background-color: #f9fbfd;
+        font-weight: 600;
+        color: #475569;
+      }
     </style>
   </head>
   <body>
-    <div class="wrap">
-      <h1>📚 이번 주 수업 시간표</h1>
+    <header class="site-header">
+      <div class="nav-inner">
+        <div class="brand">🎓 SKALA 포털</div>
+        <nav>
+          <ul>
+            <li><a href="index.html">홈</a></li>
+            <li><a href="myClass.html" class="active">수업 시간표</a></li>
+            <li><a href="myholiday.html">휴일 일과</a></li>
+            <li><a href="myProfile.html">내 소개</a></li>
+            <li><a href="myTrip.html">여행 앨범</a></li>
+            <li><a href="signUp.html">회원가입</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-      <table>
-        <thead>
-          <tr>
-            <th>시간</th>
-            <th>월</th>
-            <th>화</th>
-            <th>수</th>
-            <th>목</th>
-            <th>금</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>09:00 ~ 10:00</td>
-            <td rowspan="3" class="class-item">데이터 분석 개요 및 기초통계</td>
-            <td rowspan="3" class="class-item">LLM과 Transformer 아키텍처</td>
-            <td rowspan="3" class="class-item">LLM과 Transformer 아키텍처</td>
-            <td rowspan="3" class="class-item">HTML, CSS, JavaScript</td>
-            <td rowspan="3" class="class-item">HTML, CSS, JavaScript</td>
-          </tr>
-          <tr>
-            <td>10:00 ~ 11:00</td>
-          </tr>
-          <tr>
-            <td>11:00 ~ 12:00</td>
-          </tr>
-          <tr>
-            <td>12:00 ~ 13:00</td>
-            <td colspan="5" class="lunch">점심시간</td>
-          </tr>
-          <tr>
-            <td>13:00 ~ 14:00</td>
-            <td rowspan="2" class="class-item">데이터 분석 개요 및 기초통계</td>
-            <td rowspan="2" class="class-item">LLM과 Transformer 아키텍처</td>
-            <td rowspan="2" class="class-item">LLM과 Transformer 아키텍처</td>
-            <td rowspan="2" class="class-item">HTML, CSS, JavaScript</td>
-            <td rowspan="2" class="class-item">HTML, CSS, JavaScript</td>
-          </tr>
-          <tr>
-            <td>14:00 ~ 15:00</td>
-          </tr>
-          <tr>
-            <td>15:00 ~ 16:00</td>
-            <td class="study">자습</td>
-            <td class="study">자습</td>
-            <td class="study">자습</td>
-            <td class="study">자습</td>
-            <td class="study">자습</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="page">
+      <div class="panel">
+        <h1>📚 이번 주 수업 시간표</h1>
+        <p class="lead">요일별 수업 일정과 자습·점심 시간을 확인하세요.</p>
+        <hr />
+
+        <table>
+          <thead>
+            <tr>
+              <th>시간</th>
+              <th>월</th>
+              <th>화</th>
+              <th>수</th>
+              <th>목</th>
+              <th>금</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>09:00 ~ 10:00</td>
+              <td rowspan="3" class="class-item">데이터 분석 개요 및 기초통계</td>
+              <td rowspan="3" class="class-item">LLM과 Transformer 아키텍처</td>
+              <td rowspan="3" class="class-item">LLM과 Transformer 아키텍처</td>
+              <td rowspan="3" class="class-item">HTML, CSS, JavaScript</td>
+              <td rowspan="3" class="class-item">HTML, CSS, JavaScript</td>
+            </tr>
+            <tr>
+              <td>10:00 ~ 11:00</td>
+            </tr>
+            <tr>
+              <td>11:00 ~ 12:00</td>
+            </tr>
+            <tr>
+              <td>12:00 ~ 13:00</td>
+              <td colspan="5" class="lunch">점심시간</td>
+            </tr>
+            <tr>
+              <td>13:00 ~ 14:00</td>
+              <td rowspan="2" class="class-item">데이터 분석 개요 및 기초통계</td>
+              <td rowspan="2" class="class-item">LLM과 Transformer 아키텍처</td>
+              <td rowspan="2" class="class-item">LLM과 Transformer 아키텍처</td>
+              <td rowspan="2" class="class-item">HTML, CSS, JavaScript</td>
+              <td rowspan="2" class="class-item">HTML, CSS, JavaScript</td>
+            </tr>
+            <tr>
+              <td>14:00 ~ 15:00</td>
+            </tr>
+            <tr>
+              <td>15:00 ~ 16:00</td>
+              <td class="study">자습</td>
+              <td class="study">자습</td>
+              <td class="study">자습</td>
+              <td class="study">자습</td>
+              <td class="study">자습</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
+
+    <footer class="site-footer">&copy; 2026 SKALA-FRONT. All rights reserved.</footer>
   </body>
 </html>

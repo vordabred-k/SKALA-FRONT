@@ -4,52 +4,96 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>내 휴일 일과 소개</title>
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css"
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css"
     />
+    <link rel="stylesheet" href="../css/style.css" />
     <style>
-      body {
-        font-family: "Pretendard Variable", "Pretendard", sans-serif;
+      .timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
       }
 
-      h1 {
-        font-weight: 700;
+      .slot {
+        border-radius: 12px;
+        padding: 18px 20px;
+        border: 1px solid var(--border);
+      }
+
+      .slot h2 {
+        margin: 0 0 8px;
+      }
+
+      .slot p {
+        margin: 4px 0;
+        color: var(--text);
+      }
+
+      .slot.morning {
+        background-color: #eef7f7;
+      }
+
+      .slot.afternoon {
+        background-color: #fdf8ec;
+      }
+
+      .slot.evening {
+        background-color: #fdefe9;
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <h1>휴일 일과</h1>
-      <br />
-
-      <div style="background-color: aqua;">
-        <h2>😴오전</h2>
-        <p>기상시간 미정😴</p>
-        <p>눈 뜨면 씻고 아침식사. 식사 메뉴도 미정</p>
-        <p>식사 후에는 소화를 돕기 위한 간단한 🙆</p>
-        <p>소화 후 헬스장에서 🏋️</p>
+    <header class="site-header">
+      <div class="nav-inner">
+        <div class="brand">🎓 SKALA 포털</div>
+        <nav>
+          <ul>
+            <li><a href="index.html">홈</a></li>
+            <li><a href="myClass.html">수업 시간표</a></li>
+            <li><a href="myholiday.html" class="active">휴일 일과</a></li>
+            <li><a href="myProfile.html">내 소개</a></li>
+            <li><a href="myTrip.html">여행 앨범</a></li>
+            <li><a href="signUp.html">회원가입</a></li>
+          </ul>
+        </nav>
       </div>
-      <br />
+    </header>
 
-      <div style="background-color: beige;">
-        <h2>🫠오후</h2>
-        <p>헬스 후 샤워 후 점심식사. 메뉴 미정</p>
-        <p>점심 후에는 간단한 휴식 후에 쉬기</p>
-        <p>역량 강화 시간</p>
-      </div>
-      <br />
+    <div class="page">
+      <div class="panel">
+        <h1>🛌 휴일 일과</h1>
+        <p class="lead">오전부터 저녁까지, 나의 여유로운 휴일 루틴을 소개합니다.</p>
+        <hr />
 
-      <div style="background-color: lightsalmon;">
-        <h2>🫡저녁</h2>
-        <p>저녁식사 후에는 간단한 휴식 후에 산책</p>
-        <p>산책 ⏱️</p>
-        <p>산책 후에는 샤워 후</p>
-        <p>자기 전에는 OTT, YouTube 영상 시청</p>
+        <div class="timeline">
+          <div class="slot morning">
+            <h2>😴 오전</h2>
+            <p>기상시간 미정😴</p>
+            <p>눈 뜨면 씻고 아침식사. 식사 메뉴도 미정</p>
+            <p>식사 후에는 소화를 돕기 위한 간단한 🙆</p>
+            <p>소화 후 헬스장에서 🏋️</p>
+          </div>
+
+          <div class="slot afternoon">
+            <h2>🫠 오후</h2>
+            <p>헬스 후 샤워 후 점심식사. 메뉴 미정</p>
+            <p>점심 후에는 간단한 휴식 후에 쉬기</p>
+            <p>역량 강화 시간</p>
+          </div>
+
+          <div class="slot evening">
+            <h2>🫡 저녁</h2>
+            <p>저녁식사 후에는 간단한 휴식 후에 산책</p>
+            <p>산책 ⏱️</p>
+            <p>산책 후에는 샤워 후</p>
+            <p>자기 전에는 OTT, YouTube 영상 시청</p>
+          </div>
+        </div>
       </div>
     </div>
+
+    <footer class="site-footer">&copy; 2026 SKALA-FRONT. All rights reserved.</footer>
   </body>
 </html>

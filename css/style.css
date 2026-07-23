@@ -1,0 +1,324 @@
+/* ============================================
+   SKALA-FRONT shared design system
+   ============================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;700;900&display=swap");
+
+:root {
+  --bg: #f7f8fb;
+  --card: #ffffff;
+  --border: #e5e7eb;
+  --text: #1f2937;
+  --muted: #64748b;
+  --accent: #2f4f4f;
+  --accent-soft: #eef4f7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gothic A1", "Pretendard Variable", "Pretendard", sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 20px 0;
+}
+
+/* ---------- Header / Nav ---------- */
+header.site-header {
+  background-color: var(--card);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.brand {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.site-header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.site-header nav a {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.site-header nav a:hover {
+  background-color: var(--accent-soft);
+  color: var(--accent);
+}
+
+.site-header nav a.active {
+  background-color: var(--accent);
+  color: #ffffff;
+}
+
+/* ---------- Generic page / panel wrap ---------- */
+.page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 40px 24px 64px;
+}
+
+.panel {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  padding: 28px;
+}
+
+.page h1 {
+  margin: 0 0 12px;
+  font-size: 28px;
+  color: var(--accent);
+  padding-bottom: 12px;
+  border-bottom: 3px solid var(--accent);
+}
+
+.page > .panel > p.lead {
+  margin-top: 0;
+  color: var(--muted);
+}
+
+.page h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 24px 0 10px;
+  padding: 4px 0 4px 12px;
+  border-left: 4px solid var(--accent);
+}
+
+.page h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 18px 0 8px;
+}
+
+.page ul,
+.page ol,
+.page dl {
+  padding-left: 20px;
+  color: var(--text);
+}
+
+.page dt {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.page dd {
+  margin-left: 0;
+  margin-bottom: 8px;
+  color: var(--muted);
+}
+
+/* ---------- Table ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #d9e2ec;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th,
+td {
+  border: 1px solid var(--border);
+  padding: 12px 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+th {
+  background-color: var(--accent-soft);
+  color: #334155;
+  font-weight: 600;
+}
+
+/* ---------- Forms ---------- */
+fieldset {
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  padding: 20px 22px;
+  margin: 0 0 20px;
+  background-color: #fbfdfe;
+}
+
+legend {
+  padding: 4px 14px;
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 14px;
+  background-color: var(--accent-soft);
+  border-radius: 999px;
+}
+
+.page label {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.page input[type="text"],
+.page input[type="password"],
+.page input[type="date"],
+.page select,
+.page textarea {
+  font-family: inherit;
+  font-size: 16px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background-color: #fbfcfe;
+  color: var(--text);
+}
+
+.page input[type="text"],
+.page input[type="password"],
+.page input[type="date"] {
+  min-width: 260px;
+}
+
+.page textarea {
+  width: 100%;
+  max-width: 480px;
+}
+
+.page input:focus,
+.page select:focus,
+.page textarea:focus {
+  outline: 2px solid var(--accent-soft);
+  border-color: var(--accent);
+}
+
+.page small {
+  color: var(--muted);
+}
+
+.btn-submit,
+.btn-reset {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  margin-top: 8px;
+  margin-right: 8px;
+  transition: background-color 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+}
+
+.btn-submit {
+  background-color: var(--accent);
+  color: #ffffff;
+}
+
+.btn-submit:hover {
+  background-color: #253f3f;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(47, 79, 79, 0.3);
+}
+
+.btn-reset {
+  background-color: var(--card);
+  color: var(--muted);
+  border-color: var(--border);
+}
+
+.btn-reset:hover {
+  background-color: var(--accent-soft);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+/* ---------- Info card list (used on result / info pages) ---------- */
+.info-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-list li {
+  background-color: var(--accent-soft);
+  border-radius: 10px;
+  padding: 12px 14px;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.link-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.link-list a {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.link-list a:hover {
+  background-color: var(--accent-soft);
+  color: var(--accent);
+  border-color: var(--accent-soft);
+}
+
+footer.site-footer {
+  text-align: center;
+  font-size: 12.5px;
+  color: var(--muted);
+  padding: 24px;
+}
